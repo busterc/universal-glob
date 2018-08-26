@@ -1,14 +1,15 @@
 {
   "name": "universal-glob",
   "version": "1.0.0",
-  "description":
-    "drop-in replacement for glob lets you use promises or callbacks.",
+  "description": "drop-in replacement for glob lets you use promises or callbacks.",
   "author": {
     "name": "Buster Collings",
     "email": "busterc@gmail.com",
     "url": "https://about.me/buster"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
   "keywords": [
     "directories",
@@ -35,18 +36,18 @@
   ],
   "reveal": true,
   "devDependencies": {
-    "coveralls": "^2.13.1",
-    "eslint": "^4.1.0",
-    "eslint-config-prettier": "^2.4.0",
-    "eslint-config-xo": "^0.18.2",
-    "eslint-plugin-prettier": "^2.2.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-xo": "^0.24.2",
+    "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
-    "jest": "^21.0.0",
-    "jest-cli": "^21.0.0",
-    "lint-staged": "^4.2.1",
-    "nsp": "^2.6.3",
-    "nvx": "^1.0.1",
-    "prettier": "^1.7.0"
+    "jest": "^23.5.0",
+    "jest-cli": "^23.5.0",
+    "lint-staged": "^7.2.2",
+    "nsp": "^3.2.1",
+    "nvx": "^1.0.2",
+    "prettier": "^1.14.2"
   },
   "scripts": {
     "prepublish": "nsp check",
@@ -55,11 +56,20 @@
     "test": "jest --coverage"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["xo", "prettier"],
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
       "jest": true,
       "node": true
@@ -73,15 +83,20 @@
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
   },
   "repository": "busterc/universal-glob",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "__tests__"
+    ]
   },
   "license": "ISC",
   "dependencies": {
     "glob": "latest",
-    "universalify": "^0.1.1"
+    "universalify": "^0.1.2"
   }
 }
