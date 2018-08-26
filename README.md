@@ -1,5 +1,7 @@
 # universal-glob [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/busterc/universal-glob.svg)](https://greenkeeper.io/)
+
 > drop-in replacement for glob lets you use promises or callbacks.
 
 ## Prerequisites
