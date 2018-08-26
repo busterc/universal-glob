@@ -1,6 +1,4 @@
-# universal-glob [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/busterc/universal-glob.svg)](https://greenkeeper.io/)
+# universal-glob [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
 > drop-in replacement for glob lets you use promises or callbacks.
 
@@ -45,3 +43,5 @@ ISC © [Buster Collings](https://about.me/buster)
 [daviddm-url]: https://david-dm.org/busterc/universal-glob
 [coveralls-image]: https://coveralls.io/repos/busterc/universal-glob/badge.svg
 [coveralls-url]: https://coveralls.io/r/busterc/universal-glob
+[greenkeeper-image]: https://badges.greenkeeper.io/busterc/universal-glob.svg
+[greenkeeper-url]: https://greenkeeper.io/
