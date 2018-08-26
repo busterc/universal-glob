@@ -1,16 +1,40 @@
 {
   "name": "universal-glob",
-  "version": "1.0.0",
   "description": "drop-in replacement for glob lets you use promises or callbacks.",
-  "author": {
-    "name": "Buster Collings",
-    "email": "busterc@gmail.com",
-    "url": "https://about.me/buster"
-  },
+  "license": "ISC",
+  "author": "Buster Collings <busterc@gmail.com> (https://about.me/buster)",
+  "repository": "busterc/universal-glob",
+  "version": "1.0.0",
+  "main": "lib/index.js",
   "files": [
     "lib"
   ],
-  "main": "lib/index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prepublish": "nsp check",
+    "pretest": "eslint .",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "glob": "latest",
+    "universalify": "^0.1.2"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-xo": "^0.24.2",
+    "eslint-plugin-json": "^1.2.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "husky": "^0.14.3",
+    "jest": "^23.5.0",
+    "jest-cli": "^23.5.0",
+    "lint-staged": "^7.2.2",
+    "nsp": "^3.2.1",
+    "nvx": "^1.0.2",
+    "prettier": "^1.14.2",
+    "prettier-package-json": "^2.0.0"
+  },
   "keywords": [
     "directories",
     "dirs",
@@ -21,8 +45,8 @@
     "glob",
     "glob-promise",
     "globbing",
-    "globs",
     "globby",
+    "globs",
     "match",
     "matcher",
     "minimatch",
@@ -34,37 +58,6 @@
     "wildcard",
     "wildcards"
   ],
-  "reveal": true,
-  "devDependencies": {
-    "coveralls": "^3.0.2",
-    "eslint": "^5.4.0",
-    "eslint-config-prettier": "^3.0.1",
-    "eslint-config-xo": "^0.24.2",
-    "eslint-plugin-prettier": "^2.6.2",
-    "husky": "^0.14.3",
-    "jest": "^23.5.0",
-    "jest-cli": "^23.5.0",
-    "lint-staged": "^7.2.2",
-    "nsp": "^3.2.1",
-    "nvx": "^1.0.2",
-    "prettier": "^1.14.2"
-  },
-  "scripts": {
-    "prepublish": "nsp check",
-    "pretest": "eslint .",
-    "precommit": "lint-staged",
-    "test": "jest --coverage"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "xo",
@@ -84,19 +77,29 @@
       ]
     },
     "plugins": [
-      "prettier"
+      "prettier",
+      "json"
     ]
   },
-  "repository": "busterc/universal-glob",
   "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
       "__tests__"
     ]
   },
-  "license": "ISC",
-  "dependencies": {
-    "glob": "latest",
-    "universalify": "^0.1.2"
-  }
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ]
+  },
+  "reveal": true
 }
