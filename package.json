@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "glob": "latest",
-    "universalify": "^0.1.2"
+    "universalify": "^1.0.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
